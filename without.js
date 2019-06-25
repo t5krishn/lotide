@@ -13,7 +13,7 @@ const eqArrays = function(array1, array2) {
 const assertArraysEqual = function(array1, array2) {
   let check = eqArrays(array1, array2);
 
-  if(check) {
+  if (check) {
     console.log(`\u2705 \u2705 \u2705 Arrays Equal: ${array1} === ${array2}`);
   } else {
     console.log(`\u274c \u274c \u274c Arrays Not Equal: ${array1} !== ${array2}`);
@@ -21,7 +21,7 @@ const assertArraysEqual = function(array1, array2) {
 };
 
 
-const without = function (source, itemsToRemove) {
+const without = function(source, itemsToRemove) {
   let result = [];
 
   for (let srcIndex = 0; srcIndex < source.length; srcIndex++) {
