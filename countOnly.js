@@ -13,11 +13,12 @@ const countOnly = function(allItems, itemsToCount) {
   const result = {};
 
   for (const item of allItems) {
-    if((allItems[item] in itemsToCount) && itemsToCount[allItems[item]]) {
-      if(allItems[item] in result) {
-        result[allItems[item]]++;
+    if ((item in itemsToCount) && itemsToCount[item]) {
+      if (item in result) {
+        // Above if statement can be done as result[item] which will be false if undefined is returned
+        result[item]++;
       } else {
-        result[allItems[item]] = 1;
+        result[item] = 1;
       }
     }
   }
@@ -39,8 +40,8 @@ const firstNames = [
   "Joe"
 ];
 
-const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true });
+const result1 = countOnly(firstNames, { "Jason": false, "Karima": true, "Fang": true });
 
-assertEqual(result1["Jason"], 1);
+assertEqual(result1["Jason"], undefined);
 assertEqual(result1["Karima"], undefined);
 assertEqual(result1["Fang"], 2);
