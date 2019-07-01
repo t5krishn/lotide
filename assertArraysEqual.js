@@ -1,13 +1,5 @@
+const eqArrays = require('./eqArrays.js');
 
-const eqArrays = function(array1, array2) {
-  if (array1.length !== array2.length) return false;
-
-  for (let index = 0; index < array1.length; index++) {
-    if (array1[index] !== array2[index]) return false;
-  }
-
-  return true;
-};
 
 
 const assertArraysEqual = function(array1, array2) {
@@ -21,14 +13,14 @@ const assertArraysEqual = function(array1, array2) {
 };
 
 
-module.exports = {eqArrays};
+module.exports = assertArraysEqual;
 
 
-// assertArraysEqual([1, 2, 3], [1, 2]); // => should PASS
+// assertArraysEqual([1, 2, 3], [1, 2]); // => should FAIL
 // assertArraysEqual([1, 2, 3], [1, 2, 3]); // => should PASS
 // assertArraysEqual([1, false, "3"], [1, false, "3"]); // => should PASS
 // assertArraysEqual([], []); // => should PASS
 // assertArraysEqual([1], [1]); // => should PASS
 // assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => should PASS
 // assertArraysEqual(["ave", "2as", "qwe"], ["ave", "2as", "qwe"]); // => should PASS
-// assertArraysEqual(["asd", "cvb", "fdg"], ["ASD", "CVB", "FDG"]); // => should PASS
+// assertArraysEqual(["asd", "cvb", "fdg"], ["ASD", "CVB", "FDG"]); // => should FAIL
