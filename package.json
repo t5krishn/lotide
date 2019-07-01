@@ -1,0 +1,26 @@
+{
+  "name": "@t5krishn/lotide",
+  "version": "1.0.2",
+  "description": "Lotide directory with functions",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "mocha": "^6.1.4",
+    "chai": "^4.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t5krishn/lotide.git"
+  },
+  "author": "t5krishn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/t5krishn/lotide/issues"
+  },
+  "homepage": "https://github.com/t5krishn/lotide#readme"
+}

@@ -1,24 +1,4 @@
 
-const eqArrays = function(array1, array2) {
-  if (array1.length !== array2.length) return false;
-
-  for (let index = 0; index < array1.length; index++) {
-    if (array1[index] !== array2[index]) return false;
-  }
-
-  return true;
-};
-
-
-const assertArraysEqual = function(array1, array2) {
-  let check = eqArrays(array1, array2);
-
-  if (check) {
-    console.log(`\u2705 \u2705 \u2705 Arrays Equal: ${array1} === ${array2}`);
-  } else {
-    console.log(`\u274c \u274c \u274c Arrays Not Equal: ${array1} !== ${array2}`);
-  }
-};
 
 
 const without = function(source, itemsToRemove) {
@@ -37,16 +17,18 @@ const without = function(source, itemsToRemove) {
   return result;
 };
 
-assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
-assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
-assertArraysEqual(without([1, 2, 3], []), [1,2,3]);
-assertArraysEqual(without([1, 2, 3], [1, 2, 3]), []);
-assertArraysEqual(without([1, 1, 3, 4, 2, 3], [1, 2, 3]), [4]);
-assertArraysEqual(without(["hello", "world", "lighthouse"], ["lighthouse"]), ["hello", "world"]);
+module.exports = without;
 
-// Check array modification
-let a = ["hi", "hello", "yellow"];
+// assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
+// assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
+// assertArraysEqual(without([1, 2, 3], []), [1,2,3]);
+// assertArraysEqual(without([1, 2, 3], [1, 2, 3]), []);
+// assertArraysEqual(without([1, 1, 3, 4, 2, 3], [1, 2, 3]), [4]);
+// assertArraysEqual(without(["hello", "world", "lighthouse"], ["lighthouse"]), ["hello", "world"]);
 
-without(a, ["hi"]);
+// // Check array modification
+// let a = ["hi", "hello", "yellow"];
 
-assertArraysEqual(a, ["hi", "hello", "yellow"]);
+// without(a, ["hi"]);
+
+// assertArraysEqual(a, ["hi", "hello", "yellow"]);
