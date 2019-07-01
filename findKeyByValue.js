@@ -1,4 +1,4 @@
-const assertEqual = require('./assertEqual.js').assertEqual;
+// const assertEqual = require('./assertEqual.js').assertEqual;
 
 const findKeyByValue = function(obj, value) {
 
@@ -12,32 +12,32 @@ const findKeyByValue = function(obj, value) {
 };
 
 
+module.exports = findKeyByValue;
 
 
 
 
 
+// const bestTVShowsByGenre = {
+//   sci_fi: "The Expanse",
+//   comedy: "Brooklyn Nine-Nine",
+//   drama:  "The Wire"
+// };
 
-const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama:  "The Wire"
-};
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+// const empty = {};
 
-const empty = {};
-
-assertEqual(findKeyByValue(empty, "The Wire"), undefined);
-assertEqual(findKeyByValue(empty, ""), undefined);
+// assertEqual(findKeyByValue(empty, "The Wire"), undefined);
+// assertEqual(findKeyByValue(empty, ""), undefined);
 
 
-const identical = {
-  a : "abc",
-  b : "abc",
-  c : "cba"
-};
+// const identical = {
+//   a : "abc",
+//   b : "abc",
+//   c : "cba"
+// };
 
-assertEqual(findKeyByValue(identical, "abc"), "a");
-assertEqual(findKeyByValue(identical, "cba"), "c");
+// assertEqual(findKeyByValue(identical, "abc"), "a");
+// assertEqual(findKeyByValue(identical, "cba"), "c");

@@ -1,4 +1,4 @@
-const assertEqual = require('./assertEqual.js').assertEqual;
+// const assertEqual = require('./assertEqual.js').assertEqual;
 const eqArrays = require('./assertArraysEqual.js').eqArrays;
 
 
@@ -43,4 +43,4 @@ const eqObjects = function(object1, object2) {
 // assertEqual(eqObjects(cd2, cd2), true);
 
 
-module.exports = {eqObjects}
+module.exports = eqObjects;
